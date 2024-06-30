@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_doctor/resources/my_colors.dart';
 import 'package:i_doctor/resources/my_styles.dart';
 import 'custom_textfield.dart';
 
@@ -24,11 +25,19 @@ class RoundedForm extends StatelessWidget {
             const SizedBox(height: 20.0),
             const CustomTextField(label: "Choose Consultation"),
             const SizedBox(height: 20.0),
-            ElevatedButton(
-              onPressed: () {
-                
-              },
-              child: Text('Submit'),
+            SizedBox(
+              width: double.infinity,
+              height: 50.0, 
+              child: TextButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(MyColors.blue),
+                ),
+                onPressed: () {
+                  
+                },
+                child: TextButton(onPressed: (){},
+                child: const Text("Book Appointment", style: MyStyle.textTop,),),
+              ),
             ),
           ],
         ),
