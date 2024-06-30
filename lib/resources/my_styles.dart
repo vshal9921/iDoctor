@@ -15,6 +15,11 @@ class MyStyle{
     fontSize: 16.0
   );
 
+  static const TextStyle textProblem = TextStyle(
+    color: MyColors.blackText,
+    fontSize: 16.0
+  );
+
   static InputDecoration searchField = InputDecoration(
     hintText: "Search Doctor",
     hintStyle: const TextStyle(

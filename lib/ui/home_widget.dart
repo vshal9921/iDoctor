@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:i_doctor/resources/my_colors.dart';
 import 'package:i_doctor/resources/my_styles.dart';
+import 'package:i_doctor/ui/choose_problems.dart';
+import 'package:i_doctor/ui/problem_card.dart';
 
 class HomeWidget extends StatelessWidget {
   const HomeWidget({super.key});
@@ -13,6 +15,7 @@ class HomeWidget extends StatelessWidget {
         color: MyColors.blue,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Row(
               children: [
@@ -41,7 +44,9 @@ class HomeWidget extends StatelessWidget {
               child: TextField(
                 decoration: MyStyle.searchField,
               ),
-            )
+            ),
+            const SizedBox(height: 30.0,),
+            ChooseProblems()
           
           ],
         ),
