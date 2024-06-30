@@ -1,52 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:i_doctor/resources/my_styles.dart';
 
 class ProblemCard extends StatelessWidget {
   const ProblemCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
+      width: 200,
+      height: 150,
       decoration: BoxDecoration(
-        color : Colors.teal[300],
-        //color: isSelected ? Colors.teal[300] : Colors.teal[100],
-        borderRadius: BorderRadius.circular(15.0),
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: Colors.grey.withOpacity(0.5),
-        //     spreadRadius: 2,
-        //     blurRadius: 5,
-        //     offset: Offset(0, 3),
-        //   ),
-        // ],
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.medical_information,
-            size: 50.0,
-            color : Colors.teal[700]
-            //color: isSelected ? Colors.teal[700] : Colors.teal[600],
+        color: const Color(0xFF74E1C6), // Match the card color
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: const Offset(0, 3),
           ),
-          SizedBox(height: 10.0),
-          Text("Dental Braces", style: MyStyle.textProblem,),
-          // Spacer(),
-          // Container(
-          //   margin: const EdgeInsets.all(8.0),
-          //   height: 24.0,
-          //   width: 24.0,
-          //   decoration: BoxDecoration(
-          //     color: Colors.teal,
-          //     //color: isSelected ? Colors.teal : Colors.grey,
-          //     shape: BoxShape.circle,
-          //   ),
-          //   child: Icon(
-          //     Icons.radio_button_checked,
-          //     color: Colors.white,
-          //     size: 20.0,
-          //   ),
-          // ),
+        ],
+      ),
+      child: Stack(
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(
+                  Icons.medication, // You may need to find the exact icon or use a custom one
+                  size: 50,
+                  color: Color(0xFF6A00FF),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Dental Braces',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            top: 15,
+            right: 15,
+            child: Container(
+              width: 20,
+              height: 20,
+              decoration: const BoxDecoration(
+                color: Color(0xFF00BFFF),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.radio_button_checked,
+                color: Colors.black,
+                size: 15,
+              ),
+            ),
+          ),
         ],
       ),
     );
