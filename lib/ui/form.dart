@@ -15,7 +15,7 @@ class RoundedForm extends StatelessWidget {
       child: Form(
         child: Column(
           children: [
-            const CustomTextField(label: "Enter Name", ),
+            const CustomTextField(label: "Enter Name"),
             const SizedBox(height: 20.0),
             const CustomTextField(label: "Choose Date & Time"),
             const SizedBox(height: 20.0),
