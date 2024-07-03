@@ -17,7 +17,7 @@ class HomeWidget extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
-                  height: 600.0,
+                  height: 650.0,
                   child: ChooseProblems(),
                 )
               ),

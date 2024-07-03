@@ -31,7 +31,7 @@ class ChooseProblems extends StatelessWidget {
                     crossAxisCount: 2,
                     mainAxisSpacing: 10.0,
                     crossAxisSpacing: 10.0),
-                itemBuilder: (_, index) => ProblemCard(),
+                itemBuilder: (_, index) => const ProblemCard(),
                 itemCount: 4,
               ),
             ],

@@ -36,6 +36,7 @@ class ProblemCard extends StatelessWidget {
                 SizedBox(height: 10),
                 Text(
                   'Dental Braces',
+                  maxLines: 1,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
